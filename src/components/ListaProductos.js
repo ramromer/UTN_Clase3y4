@@ -1,9 +1,4 @@
-// <div className="product">
-    //   <img src={'/images/'+product.image} alt={product.nombre} />
-    //   <h3>{product.nombre}</h3>
-    //   <p>Precio: ${product.precio}</p>
-    //   <p>{product.descripcion}</p>
-    // </div>
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import productsData from '../data/productosData.json';

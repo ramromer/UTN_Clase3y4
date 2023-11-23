@@ -1,17 +1,3 @@
-// let ShowProducto = (unProducto) =>{
-//     return(
-//     <div>
-//         <img src={'/images/'+unProducto.img} alt={unProducto.nombre} />
-//         <h3>{unProducto.nombre}</h3>
-//         <h4>${unProducto.precio}</h4>
-//         <p>{unProducto.descripcion}</p>
-//         <p>SKU: {unProducto.sku}</p>
-//         <p>Disponibles: {unProducto.cantidad}</p>
-//     </div>
-//     )
-// }
-// export default ShowProducto;
-
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -20,17 +6,17 @@ const ShowProducto = () => {
   const [productDetails, setProductDetails] = useState(null);
 
   useEffect(() => {
-    // Assuming you have a function to fetch data from the JSON file or an API
+    
     const fetchData = async () => {
       try {
-        // Importing the JSON file dynamically (replace with the correct path)
+        // hacemos fetch de los datos
         const response = await import(`../data/productosData.json`);
         const data = await response.default;
 
-        // Find the product details based on the productId
+        // Buscamos el producto por ID
         const product = data.products.find((product) => product.nombre === productId);
 
-        // Set the product details to the state
+        // cargamos ese producto
         setProductDetails(product);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -41,15 +27,24 @@ const ShowProducto = () => {
   }, [productId]);
 
   if (!productDetails) {
-    return <p>Loading...</p>; // You can show a loading indicator while fetching data
+    return <p>Loading...</p>;
   }
 
   return (
-    <div className="product-details">
-      <h2>{productDetails.nombre}</h2>
-      <img src={`/images/${productDetails.image}`} alt={productDetails.nombre} />
-      <p>Precio: ${productDetails.precio}</p>
-      <p>{productDetails.descripcion}</p>
+    <div className='container px-4 py-5'>
+        <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <h2>{productDetails.nombre}</h2>
+            <img
+                src={`/images/${productDetails.image}`}
+                alt={productDetails.nombre}
+                className="img-fluid"
+            />
+            
+            <h3>Precio: ${productDetails.precio}</h3>
+            <p>{productDetails.descripcion}</p>
+            </div>
+        </div>
     </div>
   );
 };
