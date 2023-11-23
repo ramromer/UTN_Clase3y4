@@ -1,11 +1,22 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ListaProductos from './components/ListaProductos';
 import ShowProducto from './components/Producto';
+
 
 function App() {
   return (
+    <Router>
     <div className="App">
-        <ShowProducto img='imagen2.jpg'nombre = 'Lavarropas' precio = '60000' descripcion='Lavarrpas Dream 60 Litros' sku = '10' cantidad = '45'/>
+    <Routes>
+          {/* Route for the product list */}
+          <Route path="/" element={<ListaProductos />} />
+
+          {/* Route for showing a single product */}
+          <Route path="/product/:productId" element={<ShowProducto />} />
+        </Routes>
     </div>
+    </Router>
   );
 }
 
