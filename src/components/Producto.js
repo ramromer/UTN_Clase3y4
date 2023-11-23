@@ -33,7 +33,7 @@ const ShowProducto = () => {
   return (
     <div className='container px-4 py-5'>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <div className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg mx-auto">
             <h2>{productDetails.nombre}</h2>
             <img
                 src={`/images/${productDetails.image}`}
