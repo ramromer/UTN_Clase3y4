@@ -1,35 +1,30 @@
 {
     "products": [
       {
-        "image": "imagen1.jpg",
-        "nombre": "Licuadora",
-        "precio": 19999.99,
-        "descripcion": "Descripción de Licuadora"
-      },
+        "image": "chorizos.jpg",
+        "nombre": "Chorizos",
+        "precio": 19999.99
+        },
       {
-        "image": "imagen2.jpg",
-        "nombre": "Lavarropas",
-        "precio": 29999.99,
-        "descripcion": "Descripción del Lavarropas"
-      },
+        "image": "costeleta.jpg",
+        "nombre": "Costeleta",
+        "precio": 29999.99
+        },
       {
-        "image": "imagen3.jpg",
-        "nombre": "Televisor",
-        "precio": 34999.99,
-        "descripcion": "Descripción del Televisor"
-      },
+        "image": "costilla.jpg",
+        "nombre": "Costilla",
+        "precio": 34999.99
+        },
       {
-        "image": "imagen4.jpg",
-        "nombre": "Heladera",
-        "precio": 39999.99,
-        "descripcion": "Descripción de la Heladera"
-      },
+        "image": "matambre.jpg",
+        "nombre": "Matambre",
+        "precio": 39999.99
+        },
       {
-        "image": "imagen5.jpg",
-        "nombre": "Cocina",
-        "precio": 90000.95,
-        "descripcion": "Descripción de la cocina"
-      }
+        "image": "osobuco.jpg",
+        "nombre": "Osobuco",
+        "precio": 3499.99
+       }
     ]
   }
   
