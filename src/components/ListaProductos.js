@@ -11,6 +11,8 @@ const Product = ({ product }) => {
         <h3>{product.nombre}</h3>
         <p>Precio: ${product.precio}</p>
         <p>{product.descripcion}</p>
+        <button>AGREGAR
+        </button>
       </Link>
     </div>
   );
